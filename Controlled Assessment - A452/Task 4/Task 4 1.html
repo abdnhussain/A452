@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Assets, Elements, Objects, Arrays and Sequences - Task 3 Part IV</h1>
+
+<img id="lightimg" src="https://img.clipartfest.com/3728923db12d6bd4662f9d2671b019aa_red-light-clip-art-red-traffic-light-clipart_641-880.png" 
+style="width:384px; height:528px;"></img><br>
+
+<button onclick="lightinterval()">Click to view the animation</button>
+
+<script>
+
+lightlist = ["https://img.clipartfest.com/3728923db12d6bd4662f9d2671b019aa_red-light-clip-art-red-traffic-light-clipart_641-880.png", 
+"images/redamber.png", 
+"https://img.clipartfest.com/a1dcc960e604dfc563fefca4bf9aa9e5_green-light-clip-art-traffic-clipart-traffic-light-green_641-880.jpeg", 
+"https://img.clipartfest.com/33d4553ff6424e23080387aa213b0d67_pics-for-stop-light-yellow-yellow-traffic-light-clipart_641-880.png"]
+
+i = 0
+
+function lightsequence() {
+	i = i + 1
+	if (i == lightlist.length)
+	i = 0
+	lightcolour= document.getElementById("lightimg").src = lightlist[i]
+}
+
+function lightinterval() {
+	setInterval(lightsequence, 1000)
+}
+
+</script>
+
+</body>
+</html>

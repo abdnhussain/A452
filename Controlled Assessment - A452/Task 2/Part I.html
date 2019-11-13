@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Checking out Arrays - Task 2 Part I</h1>
+
+<p id="intro_list">This is the array of items: </p>
+
+<p id="list"></p>
+
+<p id="add">This is the updated array/list that contains your new item:  </p>
+
+<button onclick="add()">Click to add an item to the array/list</button>
+
+<script>
+
+var products = ["Printer","Tablet","Router","Switch","PC"];
+
+products.push("Server");
+
+document.getElementById("list").innerHTML = products;
+
+function add(){
+	var input= prompt("Enter an item to add to the array/list:", "Cables")
+	products.push(input)
+	document.getElementById("add").innerHTML += products;
+}
+
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Assets, Elements, Objects, Arrays and Sequences - Task 3 Part IV</h1>
+
+<img id="lightimg" src="images/red.png" style="width:384px; height:528px;"></img><br>
+
+<button onclick="lightinterval()">Click to view the animation</button>
+
+<script>
+
+lightlist = ["images/red.png", "images/redamber.png", "images/green.jpeg", "images/amber.png"]
+
+i = 0
+
+function lightsequence() {
+	i = i + 1
+	if (i == lightlist.length)
+	i = 0
+	lightcolour= document.getElementById("lightimg").src = lightlist[i]
+}
+
+function lightinterval() {
+	setInterval(lightsequence, 1000)
+}
+
+</script>
+
+</body>
+</html>

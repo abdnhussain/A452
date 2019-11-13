@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Checking out Arrays - Task 2 Part II</h1>
+
+<p id="array">This is the array/list of items:  </p>
+
+<script>
+
+var products = ["Printer","Tablet","Router","Switch","PC"];
+products.push("Server");
+
+document.getElementById("array").innerHTML += products;
+
+</script>
+
+<p id="add">This is the updated array/list:  </p>
+
+<p id="sort">This is the alphabetically ordered array/list:  </p>
+
+<p id="length">This is the number of items in the array/list:  </p>
+
+<button onclick="add()">Click to add an item to the array/list</button>
+
+<button onclick="sort()">Click to order the array/list in alphabetical order</button>
+
+<button onclick="length()">Click to display the amount of items in the array/list</button>
+
+<script>
+
+function add(){
+	var input= prompt("Enter an item to add to the array/list:", "Cables")
+	products.push(input)
+	document.getElementById("add").innerHTML += products;
+}
+
+function sort(){
+	document.getElementById("sort").innerHTML += products.sort();
+}
+
+function length(){
+	document.getElementById("length").innerHTML += products.length;
+}
+
+</script>
+
+</body>
+</html>
